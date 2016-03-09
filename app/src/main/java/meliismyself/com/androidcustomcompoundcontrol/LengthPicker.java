@@ -2,6 +2,8 @@ package meliismyself.com.androidcustomcompoundcontrol;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,8 @@ import java.util.ArrayList;
  * Created by Meli Oktavia on 3/8/2016.
  */
 public class LengthPicker extends LinearLayout {
+    private static final String KEY_SUPER_STATE = "superState";
+    private static final String KEY_NUM_INCHES = "numInches";
     private View mPlusButton;
     private TextView mTextView;
     private View mMinusButton;
@@ -30,6 +34,26 @@ public class LengthPicker extends LinearLayout {
     public LengthPicker(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        if (state instanceof Bundle){
+            Bundle bundle = (Bundle) state;
+            mNumInches = bundle.getInt(KEY_NUM_INCHES);
+            super.onRestoreInstanceState(bundle.getParcelable(KEY_SUPER_STATE));
+        }else {
+            super.onRestoreInstanceState(state);
+        }
+        updateControls();
+    }
+
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(KEY_SUPER_STATE, super.onSaveInstanceState());
+        bundle.putInt(KEY_NUM_INCHES, mNumInches);
+        return bundle;
     }
 
     private void init() {
@@ -61,6 +85,8 @@ public class LengthPicker extends LinearLayout {
 
         mPlusButton.setOnClickListener(listener);
         mMinusButton.setOnClickListener(listener);
+
+        setOrientation(LinearLayout.HORIZONTAL);
     }
 
     private void updateControls() {

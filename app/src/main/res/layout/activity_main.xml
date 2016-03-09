@@ -2,6 +2,7 @@
 <meliismyself.com.androidcustomcompoundcontrol.LengthPicker
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/length_picker"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:context="meliismyself.com.androidcustomcompoundcontrol.MainActivity"/>
