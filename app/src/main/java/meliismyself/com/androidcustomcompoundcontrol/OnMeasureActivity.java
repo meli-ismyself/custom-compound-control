@@ -2,15 +2,12 @@ package meliismyself.com.androidcustomcompoundcontrol;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class OnMeasureActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_photo_spiral);
+        setContentView(R.layout.activity_on_measure);
     }
-
 }

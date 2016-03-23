@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meliismyself.com.androidcustomcompoundcontrol.PhotoSpiral
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower"
+        android:background="@android:color/background_dark"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower_landscape"
+        android:background="@color/colorAccent"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower_top"
+        android:background="@color/colorPrimaryDark"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower_landscape_right"
+        android:background="@color/colorRed"/>
+</meliismyself.com.androidcustomcompoundcontrol.PhotoSpiral>

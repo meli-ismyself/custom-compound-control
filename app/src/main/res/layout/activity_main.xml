@@ -5,4 +5,6 @@
     android:id="@+id/length_picker"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context="meliismyself.com.androidcustomcompoundcontrol.MainActivity"/>
+    tools:context="meliismyself.com.androidcustomcompoundcontrol.MainActivity"
+
+    />
